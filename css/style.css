@@ -221,6 +221,14 @@ body {
 }
 
 /* services */
+.serv-con-title {
+  margin: 0;
+}
+
+.services-descr {
+  margin: 0;
+}
+
 .services-content {
   flex-direction: column;
   align-items: center;
@@ -267,7 +275,7 @@ body {
 }
 
 .item-img {
-  padding: 40px 167px 10px 45px;
+  padding: 40px 42px 32px 45px;
 }
  .advantages-item-desc {
   min-width: 189px;
@@ -298,18 +306,12 @@ body {
 .lication-content {
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 45px;
+  padding: 32px 45px 45px 45px;
 }
 
 .loc-price {
-  padding-top: 32px;
   margin-right: 52px;
   margin-bottom: 16px;
-}
-
-.loc-img {
-  padding-top: 32px;
-  padding-right: 45px;
 }
 
 .loc-item-title {
@@ -326,16 +328,15 @@ body {
 }
 
 .loc-more {
-  display: block;
   width: 374px;
   min-height: 440px;
   background-image: url(/img/loc-more.jpg);
   background-size: cover;
   background-position: center center;
+  justify-content: center;
 }
 
 .loc-btn {
-  flex-direction: column;
-  align-items: center;
-  padding-top: 373px;
+  align-items: flex-end;
+  margin-bottom: 27px;
 }
