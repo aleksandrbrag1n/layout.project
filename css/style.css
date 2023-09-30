@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  background: #F1F1F1;
 }
 
 *,
@@ -9,39 +10,43 @@ html {
 }
 
 @font-face {
-  font-family: 'MullerBold';
-  src: local('MillerBold'),
-  	url('fonts/MullerBold.woff') format('woff'),
-	url('fonts/MullerBold.woff2') format('woff2');
-  font-weight: 100;
+  font-family: 'Muller';
+  src: local('Miller-Bold'),
+  	url('fonts/MullerBold.woff2') format('woff2'),
+	  url('fonts/MullerBold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'MullerLight';
-  src: local('MillerLight'),
-  	url('fonts/MullerLight.woff') format('woff'),
-  	url('fonts/MullerLight.woff2') format('woff2');
-  font-weight: 100;
+  font-family: 'Muller';
+  src: local('Miller-Light'),
+  	url('fonts/MullerLight.woff2') format('woff2'),
+  	url('fonts/MullerLight.woff') format('woff');
+  font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'MullerMedium';
-  src: local('MillerMedium'),
-  	url('fonts/MullerMedium.woff') format('woff'),
-  	url('fonts/MullerMedium.woff2') format('woff2') ;
+  font-family: 'Muller';
+  src: local('Miller-Medium'),
+  	url('fonts/MullerMedium.woff2') format('woff2'),
+  	url('fonts/MullerMedium.woff') format('woff') ;
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'MullerRegular';
-  src: local('MillerRegular'),
-  	url('fonts/MullerRegular.woff') format('woff'),
-  	url('fonts/MullerRegular.woff2') format('woff2');
-  font-weight: 100;
+  font-family: 'Muller';
+  src: local('Miller-Regular'),
+  	url('fonts/MullerRegular.woff2') format('woff2'),
+  	url('fonts/MullerRegular.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 a {
@@ -55,7 +60,8 @@ img {
 
 body {
   min-width: 1170px;
-  font-family: 'MullerBold', sans-serif;
+  font-family: 'Muller', sans-serif;
+  font-weight: 400;
 }
 
 /* glob */
@@ -84,7 +90,13 @@ body {
 
 .section-title {
   margin: 0;
+  margin-left: 40px;
   margin-bottom: 20px;
+  color: #333;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .section-offset {
@@ -100,16 +112,27 @@ body {
   align-items: center;
 }
 
+.header-nav {
+  padding: 27px 45px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
 .header-logo {
   margin-right: 40px;
 }
 
 .contacts-adress {
+  color: #666;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   margin-right: auto;
 }
 
-.header-list {
-  margin-right: 114px;
+.header-nav-list {
+  margin-right: 100px;
 }
 
 .header-list-item:not(:last-child) {
@@ -118,6 +141,22 @@ body {
 
 .header-btn:not(:last-child) {
   margin-right: 40px;
+}
+
+.header-item {
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  font-size: 16px;
+}
+
+.btn {
+  font-weight: 400;
+  color: rgba(204, 153, 51, 1);
+  font-size: 16px;
+  padding: 13px 20px;
+  background-color: #fff;
+  border: 1px solid rgba(204, 153, 51, 1);
+  border-radius: 10px;
 }
 
 /* hero */
@@ -146,13 +185,7 @@ body {
   flex-wrap: nowrap;
   align-self: flex-end;
   align-items: flex-start;
-  outline: 1px solid black;
   border-radius: 15px;
-}
-
-.hero-title {
-  margin: 0;
-  margin-bottom: 20px;
 }
 
 .hero-descr {
@@ -169,9 +202,9 @@ body {
 .card-1 {
   width: 573px;
   min-height: 258px;
-  outline: 1px solid black;
   border-radius: 15px;
   flex-wrap: wrap;
+  background-repeat: no-repeat;
   background-image: url(/img/hero1.jpg);
   background-size: cover;
   background-position: center center;
@@ -180,9 +213,9 @@ body {
 .card-2 {
   width: 573px;
   min-height: 258px;
-  outline: 1px solid black;
   border-radius: 15px;
   flex-wrap: wrap;
+  background-repeat: no-repeat;
   background-image: url(/img/hero2.jpg);
   background-size: cover;
   background-position: center center;
@@ -196,10 +229,16 @@ body {
   flex-wrap: wrap;
 }
 
+.hero-content2 {
+  overflow: hidden;
+  border-radius: 15px;
+}
+
 .card-3 {
   display: block;
   width: 573px;
   min-height: 540px;
+  background-repeat: no-repeat;
   background-image: url(/img/hero3.jpg);
   background-size: cover;
   background-position: center center;
@@ -208,16 +247,63 @@ body {
 .card-title {
   margin: 0;
   margin-bottom: 15px;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+}
+
+.card-title-big {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
 }
 
 .card-price {
   margin: 0;
   margin-bottom: 47px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.card-price-big {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.hero-btn {
+  color: #F0BF5F;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-image: url(/img/more-1.svg);
+  background-position: right center;
+  background-size: 11px;
+  background-repeat: no-repeat;
+  padding-right: 18px;
 }
 
 /* join-us */
-.join-us {
-  min-height: 252px;
+.join-descr {
+  max-width: 888px;
+  min-height: 192px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
 }
 
 /* services */
@@ -235,7 +321,6 @@ body {
   width: 573px;
   min-height: 330px;
   margin-bottom: 24px;
-  outline: 1px solid black;
   border-radius: 15px;
 }
 
@@ -248,10 +333,71 @@ body {
   width: 1170px;
 }
 
+.blog-preview {
+  overflow: hidden;
+  border-radius: 15px;
+  flex-direction: column;
+}
+
+.blog-preview-image-1 {
+  background-image: url(/img/serv-1.jpg);
+  height: 165px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blog-preview-image-2 {
+  background-image: url(/img/serv-2.jpg);
+  height: 165px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blog-preview-image-3 {
+  background-image: url(/img/serv-3.jpg);
+  height: 165px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blog-preview-image-4 {
+  background-image: url(/img/serv-4.jpg);
+  height: 165px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .blog-preview-text {
+  min-height: 165px;
+  background-color: #fff;
   flex-direction: column;
   align-items: flex-start;
   padding: 26px 126px 26px 45px;
+}
+
+.serv-btn {
+  color: #C93;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 200%;
+  background-image: url(/img/more-2.svg);
+  background-position: right center;
+  background-size: 11px;
+  background-repeat: no-repeat;
+  padding-right: 18px;
+}
+
+.services-descr {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
 }
 
 /* advantages */
@@ -266,8 +412,9 @@ body {
   width: 276px;
   min-height: 276px;
   align-items: center;
-  outline: 1px solid black;
   margin-bottom: 22px;
+  border-radius: 15px;
+  background: #FFF;
 }
 
 .advantages-item:not(:nth-child(4n)) {
@@ -278,8 +425,11 @@ body {
   padding: 40px 42px 32px 45px;
 }
  .advantages-item-desc {
-  min-width: 189px;
-  min-height: 128px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
 }
 
  /* location */
@@ -291,12 +441,13 @@ body {
 }
 
 .location-item {
+  overflow: hidden;
   min-height: 440px;
   align-items: center;
   margin-bottom: 24px;
   margin-right: 24px;
-  outline: 1px solid black;
   border-radius: 15px;
+  background: #FFF;
 }
 
 .location-item:nth-child(3n) {
@@ -310,17 +461,48 @@ body {
 }
 
 .loc-price {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   margin-right: 52px;
   margin-bottom: 16px;
+}
+
+.from {
+  color: #999;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.price {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .loc-item-title {
   margin: 0;
   margin-bottom: 16px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .geoposition {
   margin-bottom: 20px;
+  color: #999;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .rooms {
@@ -330,6 +512,7 @@ body {
 .loc-more {
   width: 374px;
   min-height: 440px;
+  background-repeat: no-repeat;
   background-image: url(/img/loc-more.jpg);
   background-size: cover;
   background-position: center center;
@@ -339,4 +522,13 @@ body {
 .loc-btn {
   align-items: flex-end;
   margin-bottom: 27px;
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  background-image: url(/img/more-3.svg);
+  background-position: right bottom;
+  background-size: 11px;
+  background-repeat: no-repeat;
+  padding-right: 18px;
 }
