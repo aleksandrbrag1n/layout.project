@@ -83,14 +83,14 @@ body {
 }
 
 .container {
-  width: 1170px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .section-title {
   margin: 0;
-  margin-left: 40px;
+  padding-left: 40px;
   margin-bottom: 20px;
   color: #333;
   font-size: 40px;
@@ -105,14 +105,19 @@ body {
 
 /* header */
 .header {
-  padding: 30px 0;
+  padding-top: 30px;
 }
 
 .header-container {
   align-items: center;
 }
 
+.header-up {
+  margin-bottom: 30px;
+}
+
 .header-nav {
+  margin: 0;
   padding: 27px 45px;
   border-radius: 15px;
   background-color: #fff;
@@ -132,7 +137,7 @@ body {
 }
 
 .header-nav-list {
-  margin-right: 100px;
+  margin-right: 110px;
 }
 
 .header-list-item:not(:last-child) {
@@ -176,6 +181,7 @@ body {
   margin-right: 24px;
   flex-direction: column;
   align-items: flex-start;
+  align-self: stretch;
 }
 
 .hero-content2 {
@@ -189,10 +195,12 @@ body {
 }
 
 .hero-descr {
+  flex: auto;
   padding: 40px 108px 40px 45px;
   margin: 0;
-  min-width: 420px;
+  width: 573px;
   min-height: 178px;
+  flex-wrap: wrap;
 }
 
 .hero-descr:not(:last-child) {
@@ -222,6 +230,7 @@ body {
 }
 
 .hero-descr2 {
+  flex: auto;
   margin: 0;
   padding: 212px 229px 40px 45px;
   width: 229px;
@@ -232,6 +241,7 @@ body {
 .hero-content2 {
   overflow: hidden;
   border-radius: 15px;
+  align-self: stretch;
 }
 
 .card-3 {
@@ -296,6 +306,10 @@ body {
 }
 
 /* join-us */
+.section-descr {
+  margin: 0;
+}
+
 .join-descr {
   max-width: 888px;
   min-height: 192px;
@@ -322,6 +336,7 @@ body {
   min-height: 330px;
   margin-bottom: 24px;
   border-radius: 15px;
+  background-color: #fff;
 }
 
 .services-content:not(:nth-child(2n)) {
@@ -330,7 +345,8 @@ body {
 
 .services-list {
   flex-wrap: wrap;
-  width: 1170px;
+  max-width: 1200px;
+  align-self: stretch;
 }
 
 .blog-preview {
@@ -341,7 +357,7 @@ body {
 
 .blog-preview-image-1 {
   background-image: url(/img/serv-1.jpg);
-  height: 165px;
+  min-height: 165px;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -349,7 +365,7 @@ body {
 
 .blog-preview-image-2 {
   background-image: url(/img/serv-2.jpg);
-  height: 165px;
+  min-height: 165px;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -357,7 +373,7 @@ body {
 
 .blog-preview-image-3 {
   background-image: url(/img/serv-3.jpg);
-  height: 165px;
+  min-height: 165px;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -365,7 +381,7 @@ body {
 
 .blog-preview-image-4 {
   background-image: url(/img/serv-4.jpg);
-  height: 165px;
+  min-height: 165px;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -405,7 +421,8 @@ body {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  width: 1170px;
+  max-width: 1200px;
+  align-items: stretch;
 }
 
 .advantages-item {
@@ -424,7 +441,14 @@ body {
 .item-img {
   padding: 40px 42px 32px 45px;
 }
- .advantages-item-desc {
+
+.item-svg {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.advantages-item-desc {
+  margin: 0;
   color: #000;
   font-size: 16px;
   font-style: normal;
@@ -435,19 +459,23 @@ body {
  /* location */
 .section-item {
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   flex-wrap: wrap;
-  width: 1170px;
+  max-width: 1200px;
+  align-items: flex-start;
 }
 
 .location-item {
+  display: flex;
   overflow: hidden;
+  width: 374px;
   min-height: 440px;
-  align-items: center;
   margin-bottom: 24px;
   margin-right: 24px;
   border-radius: 15px;
   background: #FFF;
+  align-self: stretch;
+  align-items: flex-start;
 }
 
 .location-item:nth-child(3n) {
@@ -460,7 +488,12 @@ body {
   padding: 32px 45px 45px 45px;
 }
 
+.loc-option {
+  max-width: 374px;
+}
+
 .loc-price {
+  max-width: 374px;
   color: #000;
   font-size: 16px;
   font-style: normal;
@@ -484,6 +517,17 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+.loc-img {
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: baseline;
+  max-width: 374px;
+}
+
+.star:not(:nth-child(5n)) {
+  margin-right: 6px;
 }
 
 .loc-item-title {
@@ -517,18 +561,19 @@ body {
   background-size: cover;
   background-position: center center;
   justify-content: center;
+  align-self: stretch;
 }
 
 .loc-btn {
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 27px;
   color: #FFF;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  background-image: url(/img/more-3.svg);
-  background-position: right bottom;
-  background-size: 11px;
-  background-repeat: no-repeat;
-  padding-right: 18px;
+  align-self: flex-end;
+}
+
+.loc-span {
+  padding-right: 10px;
 }
