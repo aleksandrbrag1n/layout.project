@@ -118,7 +118,7 @@ body {
 
 .header-nav {
   margin: 0;
-  padding: 27px 45px;
+  padding: 14px 45px;
   border-radius: 15px;
   background-color: #fff;
 }
@@ -490,17 +490,17 @@ body {
 
 .loc-option {
   max-width: 374px;
+  margin-bottom: 16px;
+  justify-content: space-between;
 }
 
 .loc-price {
-  max-width: 374px;
+  max-width: 160px;
   color: #000;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-right: 52px;
-  margin-bottom: 16px;
 }
 
 .from {
