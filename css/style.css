@@ -613,6 +613,7 @@ body {
   border-radius: 15px;
   background: #FFF;
   justify-content: space-between;
+  border: hidden;
 }
 
 .choice {
@@ -627,12 +628,12 @@ body {
 
 .blog-text {
   margin: 0;
-  margin-bottom: 15px;
   color: #000;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-bottom: 15px;
 }
 
 .text-trip:not(:last-child) {
@@ -640,8 +641,35 @@ body {
   flex-grow: 1;
 }
 
-.tourist {
+.text-trip:last-child {
   margin-right: 51px;
+}
+
+.city {
+  border: hidden;
+  width: 169px;
+}
+
+.country {
+  border: hidden;
+  width: 169px;
+}
+
+.date {
+  border: hidden;
+  width: 121px;
+}
+
+.night {
+  border: hidden;
+  width: 121px;
+  border-bottom: inset;
+}
+
+.tourist {
+  border: hidden;
+  width: 121px;
+  border-bottom: inset;
 }
 
 .blog-button {
@@ -773,6 +801,7 @@ body {
   background-position: center center;
   justify-content: center;
   align-self: stretch;
+  border-radius: 10px;
 }
 
 /* footer */
@@ -783,13 +812,16 @@ body {
 .footer-container {
   min-height: 341px;
   flex-direction: column;
+  background: #333;
+  border-radius: 15px;
 }
 
 .footer-contain {
   padding: 45px;
-  border-radius: 15px;
-  background: #333;
-  position: absolute;
+  background: url(/img/footer-logo.svg);
+  background-repeat: no-repeat;
+  background-position-x: 739px;
+  background-position-y: 112px;
 }
 
 .footer-left {
@@ -897,12 +929,4 @@ body {
 
 .social-link-vk {
   background-image: url(/img/vk.svg);
-}
-
-.footer-logo {
-  position: relative;
-  bottom: -112px;
-  right: -739px;
-  width: 254px;
-  height: 228px;
 }
