@@ -158,7 +158,7 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .header-tel:focus {
@@ -176,13 +176,42 @@ body {
   outline: none;
 }
 
+.header-link-lk {
+  display: flex;
+  align-items: center;
+  color: rgba(204, 153, 51, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.header-link-lk:focus {
+  outline-offset: 5px;
+  outline: 1px solid rgba(204, 153, 51, 1);
+}
+
+.header-link-lk:hover {
+  color: rgba(240, 191, 95, 1);
+}
+
+.header-link-lk:active {
+  color: rgba(164, 115, 18, 1);
+  outline: none;
+}
+
+.header-link-lk-svg {
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+}
+
 .header-link-lk svg {
   fill: #C93;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .header-link-lk:focus svg {
@@ -214,7 +243,7 @@ body {
   font-weight: 400;
   color: rgba(102, 102, 102, 1);
   font-size: 16px;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .header-item:focus {
@@ -243,7 +272,7 @@ body {
 }
 
 .header-btn {
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .header-btn:focus {
@@ -404,7 +433,19 @@ body {
   background-size: 11px;
   background-repeat: no-repeat;
   padding-right: 18px;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.hero-btn:focus:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid rgba(204, 153, 51, 1);
+  outline-offset: 8px;
 }
 
 .hero-btn:hover {
@@ -419,7 +460,7 @@ body {
   display: flex;
   position: relative;
   width: 100%;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .hero-cards:not(:last-child) {
@@ -473,7 +514,7 @@ body {
   display: flex;
   position: relative;
   width: 100%;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .serv-blogs:focus {
@@ -552,7 +593,7 @@ body {
   background-size: 11px;
   background-repeat: no-repeat;
   padding-right: 18px;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .serv-btn:hover {
@@ -706,7 +747,7 @@ body {
 
 .rooms {
   padding: 13px 20px;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .rooms:focus {
@@ -741,15 +782,6 @@ body {
   position: relative;
 }
 
-.loc-btn:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .loc-btn {
   align-items: center;
   color: #FFF;
@@ -757,13 +789,34 @@ body {
   font-style: normal;
   font-weight: 500;
   align-self: flex-end;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.loc-btn:focus:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid rgba(204, 153, 51, 1);
+  outline-offset: 8px;
+}
+
+.loc-btn:hover {
+  color: rgba(240, 191, 95, 1);
+}
+
+.loc-btn:active {
+  color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 
 .loc-span {
   margin-right: 10px;
   position: relative;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .loc-span:focus {
@@ -878,7 +931,7 @@ body {
 .blog-btn {
   padding: 13px 30px;
   align-self: center;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .blog-btn:focus {
@@ -952,7 +1005,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .contact-item-tel:focus {
@@ -976,7 +1029,8 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  align-self: flex-start
 }
 
 .contact-item-link:focus {
@@ -1040,7 +1094,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .btn-contacts:focus {
@@ -1128,7 +1182,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .footer-link:focus {
@@ -1182,7 +1236,8 @@ body {
 }
 
 .footer-item-tel {
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  align-self: flex-start
 }
 
 .footer-item-tel:focus {
@@ -1201,7 +1256,8 @@ body {
 }
 
 .footer-item-link {
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  align-self: flex-start
 }
 
 .footer-item-link:focus {
@@ -1234,7 +1290,7 @@ body {
   height: 25px;
   align-items: center;
   justify-content: center;
-  transform: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .social-link svg {
