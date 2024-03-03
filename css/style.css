@@ -1297,49 +1297,26 @@ body {
   fill: rgba(153, 153, 153, 1);
 }
 
-.social-link-group:focus svg {
-  fill: transparent;
-  stroke: rgba(204, 153, 51, 1);
-}
-
-.social-link-group:hover svg {
-  fill: rgba(204, 153, 51, 1);
-}
-
-.social-link-group:active svg {
-  fill: rgba(164, 115, 18, 1);
-}
-
-.social-link-ok:focus svg {
-  fill: transparent;
-  stroke: rgba(204, 153, 51, 1);
-}
-
-.social-link-ok:hover svg {
-  fill: rgba(204, 153, 51, 1);
-}
-
-.social-link-ok:active svg {
-  fill: rgba(164, 115, 18, 1);
-}
-
-.social-link-vk:focus svg {
-  fill: transparent;
-  stroke: rgba(204, 153, 51, 1);
-}
-
-.social-link-vk:hover svg {
-  fill: rgba(204, 153, 51, 1);
-}
-
-.social-link-vk:active svg {
-  fill: rgba(164, 115, 18, 1);
-}
-
 .social-item {
   background-position: right;
 }
 
 .social-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.social-link svg path{
+  transition: fill 0.4s ease;
+}
+
+.social-link:hover svg path {
+  fill: #CC9933;
+}
+
+.social-link:focus svg path {
+  fill: #CC9933;
+}
+
+.social-link:active svg path {
+  fill: #A47312;
 }
