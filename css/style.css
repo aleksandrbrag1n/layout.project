@@ -117,7 +117,7 @@ body {
   color: #333;
   font-size: 40px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
 }
 
@@ -143,22 +143,32 @@ body {
   background-color: #fff;
 }
 
-.header-logo {
+.header-logo-img {
+  display: block;
+  height: 54px;
+  width: 261px;
+  background-image: url(/img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
   margin-right: 40px;
 }
 
 .contacts-adress {
   margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 
 .header-tel {
-  position: relative;
+  position: absolute;
   color: #666;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, outline-color 1s ease-in-out, outline-offset 1s ease-in-out;
 }
 
 .header-tel:focus {
@@ -178,18 +188,21 @@ body {
 
 .header-link-lk {
   display: flex;
+  position: relative;
+  width: 100%;
   align-items: center;
   color: rgba(204, 153, 51, 1);
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  transition: translate 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, outline-color 1s ease-in-out, outline-offset 1s ease-in-out;
 }
 
 .header-link-lk:focus {
   outline-offset: 5px;
   outline: 1px solid rgba(204, 153, 51, 1);
   color: rgba(204, 153, 51, 1);
+  transition: color 0.5s ease-in-out;
 }
 
 .header-link-lk:hover {
@@ -206,6 +219,7 @@ body {
   margin-right: 5px;
   width: 24px;
   height: 24px;
+  transition: 0.5s ease-in-out;
 }
 
 .header-link-lk svg {
@@ -219,10 +233,12 @@ body {
 .header-link-lk:focus svg {
   fill: transparent;
   stroke: rgba(204, 153, 51, 1);
+  transition: color 0.5s ease-in-out;
 }
 
 .header-link-lk:hover svg {
   fill: rgba(240, 191, 95, 1);
+  transition: color 0.5s ease-in-out;
 }
 
 .header-link-lk:active svg {
